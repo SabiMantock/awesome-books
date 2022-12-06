@@ -12,7 +12,7 @@ const addBook = (book) => {
     <li id="${book.id}">
       <p>${book.title}</p>
       <p>${book.author}</p>
-      <button type='button'>Remove</button>
+      <button class='delete' type='button' onclick=remove_book("${book.id}") >Remove</button>
     </li>
 `;
 };
@@ -33,3 +33,12 @@ form.addEventListener("submit", (e) => {
     console.log(books);
   }
 });
+
+function remove_book(book_id){
+    console.log(book_id)
+    let deleteBook = JSON.parse(localStorage.getItem("books"))
+    let newArray = deleteBook.filter((book) => book.id != book_id)
+    console.log(newArray)
+    localStorage.setItem("books", JSON.stringify(newArray));
+
+}
