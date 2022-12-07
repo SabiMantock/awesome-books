@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 const collection = document.getElementById('collection');
 const title = document.getElementById('book_title');
 const author = document.getElementById('book_author');
@@ -51,9 +50,7 @@ function removeBook(bookId) {
 const storedBooks = JSON.parse(localStorage.getItem('books')) || [];
 
 if (localStorage.getItem('books')) {
-  storedBooks.map((book) => {
-    addBook(book);
-  });
+  storedBooks.map((book) => addBook(book));
 }
 
 removeBook();
