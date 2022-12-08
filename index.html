@@ -8,24 +8,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Awesome Books</h1>
-    <div id="collection" class="collection"></div>
-    <div>
-      <form id="form">
+    <h1 id="title">All awesome books</h1>
+    <ul id="collection" class="collection"></ul>
+    <hr/>
+    <h2 id="formTitle">Add a new book</h2>
+    <form id="form">
+      <div class="form-group">
         <input type="text" placeholder="Title" id="book_title" name="title" />
-        <br />
-        <hr />
-
-        <input
-          type="text"
-          placeholder="Author"
-          id="book_author"
-          name="author"
-        /><br />
-        <hr />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Author" id="book_author" name="author"/>
+      </div>
+      <div class="form-group" id="btn">
         <button type="submit" id="addBtn">Add</button>
-      </form>
-    </div>
+      </div>
+    </form>
+    
 
     <script src="script.js"></script>
   </body>
