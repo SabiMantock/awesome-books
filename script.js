@@ -11,8 +11,8 @@ class Book {
 
 class Layout {
   static displayBooks() {
-    // const storedBooks = StoreBookData.getBooksData();
-    // storedBooks.map((book) => Layout.bookList(book));
+    const storedBooks = StoreBookData.getBooksData();
+    storedBooks.map((book) => Layout.bookList(book));
   }
 
   static bookList(book) {
@@ -26,11 +26,11 @@ class Layout {
 `;
   }
 
-  // static deleteBook(bookId) {
-  //   StoreBookData.removeBook(bookId);
-  //   const booksId = document.getElementById(bookId);
-  //   booksId.remove();
-  // }
+  static deleteBook(bookId) {
+    StoreBookData.removeBook(bookId);
+    const booksId = document.getElementById(bookId);
+    booksId.remove();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', Layout.displayBooks);
@@ -60,15 +60,15 @@ class StoreBookData {
     return books;
   }
 
-  // static addBook(book) {
-  //   const books = StoreBookData.getBooksData();
-  //   books.push(book);
-  //   localStorage.setItem('books', JSON.stringify(books));
-  // }
+  static addBook(book) {
+    const books = StoreBookData.getBooksData();
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
 
-  // static removeBook(bookId) {
-  //   const books = StoreBookData.getBooksData();
-  //   const newArray = books.filter((book) => book.id !== bookId);
-  //   localStorage.setItem('books', JSON.stringify(newArray));
-  // }
+  static removeBook(bookId) {
+    const books = StoreBookData.getBooksData();
+    const newArray = books.filter((book) => book.id !== bookId);
+    localStorage.setItem('books', JSON.stringify(newArray));
+  }
 }
