@@ -1,42 +1,8 @@
 body {
   margin: 0;
   box-sizing: border-box;
-}
-
-.navbar {
-  display: flex;
-  border: 5px solid black;
-  justify-content: space-between;
-}
-
-.navbar-nav {
-  list-style: none;
-  display: flex;
-  text-decoration: none;
-  padding-right: 16px;
-}
-
-.navbar-brand {
-  margin-left: 20px;
-}
-
-.navlist {
-  text-decoration: none;
-  padding-right: 60px;
-  cursor: pointer;
-  padding-left: 12px;
-}
-
-.bar {
-  border-right: 4px solid black;
-}
-
-.heading {
-  font-size: 80px;
   font-family: 'Lato', sans-serif;
-  text-align: center;
 }
-
 
 input {
   width: 100%;
@@ -49,8 +15,50 @@ hr {
   border: 1px solid #000;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.header {
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+  padding: 0;
+  gap: 20px;
+  margin: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.line {
+  border-right: 2px solid black;
+}
+
+#list {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 #title {
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .collection {
@@ -71,7 +79,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 #delete {
@@ -80,16 +88,21 @@ hr {
   background-color: #fff;
 }
 
+#addNew {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: none;
+}
+
 #formTitle {
   text-align: center;
-  display: none;
+  margin-bottom: 50px;
 }
 
 #form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  display: none;
 }
 
 .form-group {
@@ -108,21 +121,20 @@ hr {
   background-color: #fff;
 }
 
-
-.contact {
+#contact {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-h5 {
-  text-align: center;
-}
-
-.delete {
-  float: right;
-  border-radius: 4px;
+#contact h2 {
+  margin-bottom: 25px;
 }
 
 .container-footer {
-  border: 4px solid #363535;
-  margin-top: 24px;
+  border: 2px solid #363535;
+  margin: 5px 10px;
+  padding: 5px;
 }
