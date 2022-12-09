@@ -1,6 +1,34 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
 
+const liList = document.getElementById('li-list');
+const liAdd = document.getElementById('li-add');
+const liContact = document.getElementById('li-contact');
+const list = document.getElementById('list');
+const addNew = document.getElementById('addNew');
+const contact = document.getElementById('contact');
+
+liList.addEventListener('click', (e) => {
+  e.preventDefault();
+  list.style.display = 'block';
+  addNew.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+liAdd.addEventListener('click', (e) => {
+  e.preventDefault();
+  addNew.style.display = 'block';
+  list.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+liContact.addEventListener('click', (e) => {
+  e.preventDefault();
+  contact.style.display = 'flex';
+  addNew.style.display = 'none';
+  list.style.display = 'none';
+});
+
 class Book {
   constructor(id, title, author) {
     this.id = id;
@@ -20,7 +48,6 @@ class Layout {
     collection.innerHTML += `
     <li id='${book.id}' class='listItem'>
       <p>"${book.title}" by ${book.author} </p>
-      <p></p>
       <button id='delete' type='button' onclick ='Layout.deleteBook(${book.id})'>Remove</button>
     </li>
 `;
