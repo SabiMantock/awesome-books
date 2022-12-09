@@ -9,6 +9,11 @@ class Book {
   }
 }
 
+const list = document.querySelector('#list');
+const addNew = document.querySelector('#addNew');
+const contactLink = document.querySelector('#contact');
+
+
 class Layout {
   static displayBooks() {
     const storedBooks = StoreBookData.getBooksData();
@@ -43,7 +48,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
   if (title !== '' && author !== '') {
     const book = new Book(id, title, author);
-    Layout.bookList(book);
+    Layout.bookList(book); 
     StoreBookData.addBook(book);
     document.getElementById('form').reset();
   }
@@ -71,4 +76,30 @@ class StoreBookData {
     const newArray = books.filter((book) => book.id !== bookId);
     localStorage.setItem('books', JSON.stringify(newArray));
   }
+
 }
+
+form.addEventListener('submit', (e) => {
+  if (title.value !== null && author.value !== null) {
+    collection.storeBook();
+    location.reload();
+    title.value = '';
+    author.value = '';
+  }
+  e.preventDefault();
+});
+
+list.addEventListener('click', (e) => {
+  e.preventDefault();
+  collection.showList();
+});
+
+addNew.addEventListener('click', (e) => {
+  e.preventDefault();
+  collection.showNew();
+});
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  collection.showContact();
+});

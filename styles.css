@@ -3,6 +3,41 @@ body {
   box-sizing: border-box;
 }
 
+.navbar {
+  display: flex;
+  border: 5px solid black;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+  padding-right: 16px;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.navlist {
+  text-decoration: none;
+  padding-right: 60px;
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+.bar {
+  border-right: 4px solid black;
+}
+
+.heading {
+  font-size: 80px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+
 input {
   width: 100%;
   height: 30px;
@@ -20,7 +55,7 @@ hr {
 
 .collection {
   list-style: none;
-  border: 1px solid #000;
+  border: 2px solid #000;
   height: 200px;
   margin: 0 10px;
   overflow: auto;
@@ -29,7 +64,7 @@ hr {
 
 .collection li:nth-child(odd) {
   background-color: rgb(221, 221, 221);
-  border: 1px solid rgb(221, 221, 221);
+  border: 2px solid rgb(221, 221, 221);
 }
 
 .listItem {
@@ -47,12 +82,14 @@ hr {
 
 #formTitle {
   text-align: center;
+  display: none;
 }
 
 #form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  display: none;
 }
 
 .form-group {
@@ -69,4 +106,23 @@ hr {
   box-shadow: 3px 5px;
   border: 1px solid #000;
   background-color: #fff;
+}
+
+
+.contact {
+  display: none;
+}
+
+h5 {
+  text-align: center;
+}
+
+.delete {
+  float: right;
+  border-radius: 4px;
+}
+
+.container-footer {
+  border: 4px solid #363535;
+  margin-top: 24px;
 }

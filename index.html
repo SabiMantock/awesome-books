@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Books - plain JavaScript with objects</title>
+    <title>Awesome Books Application</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+   <header>
+        <nav class="navbar ">
+            <div>
+                <p class="navbar-brand">Awesome Books</p>
+            </div>
+            <div>
+                <ul class="navbar-nav">
+                    <li id="li-list">
+                        <div class="navlist bar"><a href="" id="list">List</div>
+                      </a>
+                    </li>
+                    <li id="li-add">
+                        <div class="navlist bar"><a href="" id="add new">Add New</div>
+                      </a>
+                    </li>
+                    <li id="li-contact">
+                        <div class="navlist "><a href="" id="contact">Contact</div>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <p id="date"></p>
+
     <h1 id="title">All awesome books</h1>
     <ul id="collection" class="collection"></ul>
     <hr/>
@@ -24,6 +50,21 @@
       </div>
     </form>
     
+    <div class="contact">
+      <h1>Contact information</h1>
+      <p>Do any have question or just want to say "Hello"? you can reach out to us</p>
+      <ul>
+          <li>Our e-mail: <span class="text-primary">spacecase@gmail.com</span></li>
+          <li>Our phone number: <span class="text-primary">+27383844846</span></li>
+          <li>Our address: <span class="text-primary">Spacerange 119, Neverland, Tubuktu</span></li>
+      </ul>
+
+  </div>
+
+
+  <footer class="container-footer">
+      <h5>Copyright <span class="text-primary">Sabi/Athaliah-Awesome Books</span></h5>
+  </footer>
 
     <script src="script.js"></script>
   </body>
