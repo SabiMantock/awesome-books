@@ -2,7 +2,7 @@
 /* eslint-disable max-classes-per-file */
 
 const liList = document.getElementById('li-list');
-// const liAdd = document.getElementById('li-add');
+const liAdd = document.getElementById('li-add');
 const liContact = document.getElementById('li-contact');
 const list = document.getElementById('list');
 const addNew = document.getElementById('addNew');
@@ -15,12 +15,12 @@ liList.addEventListener('click', (e) => {
   contact.style.display = 'none';
 });
 
-// liAdd.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   addNew.style.display = 'block';
-//   list.style.display = 'none';
-//   contact.style.display = 'none';
-// });
+liAdd.addEventListener('click', (e) => {
+  e.preventDefault();
+  addNew.style.display = 'block';
+  list.style.display = 'none';
+  contact.style.display = 'none';
+});
 
 liContact.addEventListener('click', (e) => {
   e.preventDefault();
@@ -99,3 +99,4 @@ class StoreBookData {
     localStorage.setItem('books', JSON.stringify(newArray));
   }
 }
+

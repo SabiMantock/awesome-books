@@ -61,6 +61,12 @@ p {
   margin-bottom: 25px;
 }
 
+#date{
+  float: right;
+    margin-top: 8px;
+    font-size: 12px;
+    margin-right: 10px;
+}
 .collection {
   list-style: none;
   border: 2px solid #000;
