@@ -1,6 +1,34 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
 
+const liList = document.getElementById('li-list');
+// const liAdd = document.getElementById('li-add');
+const liContact = document.getElementById('li-contact');
+const list = document.getElementById('list');
+const addNew = document.getElementById('addNew');
+const contact = document.getElementById('contact');
+
+liList.addEventListener('click', (e) => {
+  e.preventDefault();
+  list.style.display = 'block';
+  addNew.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+// liAdd.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   addNew.style.display = 'block';
+//   list.style.display = 'none';
+//   contact.style.display = 'none';
+// });
+
+liContact.addEventListener('click', (e) => {
+  e.preventDefault();
+  contact.style.display = 'flex';
+  addNew.style.display = 'none';
+  list.style.display = 'none';
+});
+
 class Book {
   constructor(id, title, author) {
     this.id = id;
@@ -8,11 +36,6 @@ class Book {
     this.author = author;
   }
 }
-
-const list = document.querySelector('#list');
-const addNew = document.querySelector('#addNew');
-const contactLink = document.querySelector('#contact');
-
 
 class Layout {
   static displayBooks() {
@@ -25,7 +48,6 @@ class Layout {
     collection.innerHTML += `
     <li id='${book.id}' class='listItem'>
       <p>"${book.title}" by ${book.author} </p>
-      <p></p>
       <button id='delete' type='button' onclick ='Layout.deleteBook(${book.id})'>Remove</button>
     </li>
 `;
@@ -48,7 +70,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
   if (title !== '' && author !== '') {
     const book = new Book(id, title, author);
-    Layout.bookList(book); 
+    Layout.bookList(book);
     StoreBookData.addBook(book);
     document.getElementById('form').reset();
   }
@@ -76,30 +98,4 @@ class StoreBookData {
     const newArray = books.filter((book) => book.id !== bookId);
     localStorage.setItem('books', JSON.stringify(newArray));
   }
-
 }
-
-form.addEventListener('submit', (e) => {
-  if (title.value !== null && author.value !== null) {
-    collection.storeBook();
-    location.reload();
-    title.value = '';
-    author.value = '';
-  }
-  e.preventDefault();
-});
-
-list.addEventListener('click', (e) => {
-  e.preventDefault();
-  collection.showList();
-});
-
-addNew.addEventListener('click', (e) => {
-  e.preventDefault();
-  collection.showNew();
-});
-
-contactLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  collection.showContact();
-});
