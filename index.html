@@ -8,63 +8,78 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-   <header>
-        <nav class="navbar ">
-            <div>
-                <p class="navbar-brand">Awesome Books</p>
-            </div>
-            <div>
-                <ul class="navbar-nav">
-                    <li id="li-list">
-                        <div class="navlist bar"><a href="" id="list">List</div>
-                      </a>
-                    </li>
-                    <li id="li-add">
-                        <div class="navlist bar"><a href="" id="add new">Add New</div>
-                      </a>
-                    </li>
-                    <li id="li-contact">
-                        <div class="navlist "><a href="" id="contact">Contact</div>
-                      </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <header class="header">
+      <h1 class="navbar-brand">Awesome Books</h1>
+
+      <nav>
+        <ul class="navbar-nav">
+          <li id="li-list">
+            <a href="">List </a>
+          </li>
+          <div class="line"></div>
+          <li id="li-add">
+            <a href="">Add New</a>
+          </li>
+          <div class="line"></div>
+          <li id="li-contact">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <p id="date"></p>
+    <section id="list">
+      <h2 id="title">All awesome books</h2>
+      <ul id="collection" class="collection"></ul>
+    </section>
 
-    <h1 id="title">All awesome books</h1>
-    <ul id="collection" class="collection"></ul>
-    <hr/>
-    <h2 id="formTitle">Add a new book</h2>
-    <form id="form">
-      <div class="form-group">
-        <input type="text" placeholder="Title" id="book_title" name="title" />
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Author" id="book_author" name="author"/>
-      </div>
-      <div class="form-group" id="btn">
-        <button type="submit" id="addBtn">Add</button>
-      </div>
-    </form>
-    
-    <div class="contact">
-      <h1>Contact information</h1>
-      <p>Do any have question or just want to say "Hello"? you can reach out to us</p>
+    <section id="addNew">
+      <h2 id="formTitle">Add a new book</h2>
+      <form id="form">
+        <div class="form-group">
+          <input type="text" placeholder="Title" id="book_title" name="title" />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Author"
+            id="book_author"
+            name="author"
+          />
+        </div>
+        <div class="form-group" id="btn">
+          <button type="submit" id="addBtn">Add</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact information</h2>
+      <p>
+        Do any have question or just want to say "Hello"? you can reach out to
+        us
+      </p>
       <ul>
-          <li>Our e-mail: <span class="text-primary">spacecase@gmail.com</span></li>
-          <li>Our phone number: <span class="text-primary">+27383844846</span></li>
-          <li>Our address: <span class="text-primary">Spacerange 119, Neverland, Tubuktu</span></li>
+        <li>
+          Our e-mail: <span class="text-primary">spacecase@gmail.com</span>
+        </li>
+        <li>
+          Our phone number: <span class="text-primary">+27383844846</span>
+        </li>
+        <li>
+          Our address:
+          <span class="text-primary">Spacerange 119, Neverland, Tubuktu</span>
+        </li>
       </ul>
+    </section>
 
-  </div>
-
-
-  <footer class="container-footer">
-      <h5>Copyright <span class="text-primary">Sabi/Athaliah-Awesome Books</span></h5>
-  </footer>
+    <footer class="container-footer">
+      <p>
+        Copyright
+        <span class="text-primary">Sabi & Athaliah - Awesome Books</span>
+      </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
