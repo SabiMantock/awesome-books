@@ -99,4 +99,3 @@ class StoreBookData {
     localStorage.setItem('books', JSON.stringify(newArray));
   }
 }
-
